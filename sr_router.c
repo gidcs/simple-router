@@ -45,8 +45,6 @@
 void sr_handle_arpreq(struct sr_instance* sr, struct sr_arpreq* req){
   /* TODO: Fill this in */
 	/* LKS start */
-	time_t now_t;
-	time(&now_t);
 	if (difftime(time(NULL), req->sent) > 1.0){ /* Last sent time: req->sent */
 		/* this sent req pass 1s */
 		if (req->times_sent >= 5){
